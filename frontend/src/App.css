@@ -6,3 +6,26 @@
   text-align: center;
   background-color: #FB923C; /* This is a Tailwind color, but we're using plain CSS here */
 }
+
+/* Typewriter effect */
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.typewriter h1 {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typewriter 5s steps(40, end) 1s forwards, fadeIn 0.5s ease 1s forwards;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
